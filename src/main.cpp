@@ -8,8 +8,7 @@ using namespace std;
 
 int main(){
     RenderWindow window(VideoMode(1920,1080),"Test");
-    RectangleShape rectangle;
-    rectangle.setSize(sf::Vector2f(1920, 1080));
+    grid test(2,2,0,0);
     while(window.isOpen()){
         Event event;
         while(window.pollEvent(event)){
@@ -18,7 +17,7 @@ int main(){
             }
         }   
         window.clear();
-        window.draw(rectangle);
+        cout << test.getPos().x << " , " << test.getPos().y <<  "\n";
         window.display();
     }
 }
