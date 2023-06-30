@@ -1,6 +1,6 @@
 #include<Grid.h>
 
-grid::grid(int chunkX,int chunkY,int gridNumX,int gridNumY){
+grid::grid(int chunkX,int chunkY,float gridNumX,float gridNumY){
     windowSize = vec2(1920,1080);
     gridSize = vec2(15,8.4375);
 

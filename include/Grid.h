@@ -8,7 +8,7 @@ using namespace std;
 
 class grid{
 public:
-    grid(int chunkX,int chunkY,int gridNum,int gridNumY);
+    grid(int chunkX,int chunkY,float gridNum,float gridNumY);
     vec2 getPos();
 
 private:
