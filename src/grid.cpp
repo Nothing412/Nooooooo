@@ -29,6 +29,9 @@ grid::grid(int chunkX,int chunkY,int gridNumX,int gridNumY){
     }
 
     //other
+
+    
+
     if(gridNumX == 0){
         hasX = false;
     }
@@ -38,11 +41,25 @@ grid::grid(int chunkX,int chunkY,int gridNumX,int gridNumY){
     }
 
     else{
-        acpos.x = gridNumX * windowSize.x;
+        pos.x += gridNumX * gridSize.x;
     }    
+
+    //x
+
+    if(gridNumY == 0){
+        hasY = false;
+    }
+
+    if(hasGridY = false){
+        acpos.y = 0;
+    }
+
+    else{
+        pos.y += gridNumY * gridSize.x;
+    }   
     
 }
 
 vec2 grid::getPos(){
-    return acpos;
+    return pos;
 }

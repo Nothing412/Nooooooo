@@ -8,7 +8,12 @@ using namespace std;
 
 int main(){
     RenderWindow window(VideoMode(1920,1080),"Test");
-    grid test(2,2,0,0);
+    grid test(0,0,5,5);
+    RectangleShape rectangle;
+    rectangle.setSize(vec2(100,100));
+    rectangle.setPosition(test.getPos());
+    rectangle.setFillColor(Color::White);
+
     while(window.isOpen()){
         Event event;
         while(window.pollEvent(event)){
@@ -18,6 +23,7 @@ int main(){
         }   
         window.clear();
         cout << test.getPos().x << " , " << test.getPos().y <<  "\n";
+        window.draw(rectangle);
         window.display();
     }
 }
